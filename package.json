@@ -2,9 +2,10 @@
   "name": "render-chat-message",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "parcel build src/index.html",
+    "watch": "parcel src/index.html"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/CalebBabin/render-chat-message/issues"
   },
-  "homepage": "https://github.com/CalebBabin/render-chat-message#readme"
+  "homepage": "https://github.com/CalebBabin/render-chat-message#readme",
+  "dependencies": {
+    "parcel": "^2.0.0-beta.2"
+  }
 }

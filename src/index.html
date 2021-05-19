@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <title>Rendered chat message</title>
+    <style>
+        html,
+        body {
+            font-family: sans-serif;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            font-smooth: never;
+            -webkit-font-smoothing: none;
+            -ms-interpolation-mode: nearest-neighbor;
+            image-rendering: pixelated;
+            image-rendering: -moz-crisp-edges;
+            image-rendering: crisp-edges;
+        }
+
+        #username {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <span id="username">?username=abc</span>: <span id="message">&message=xyz</span>
+    <script>
+        const params = (new URL(document.location)).searchParams;
+        document.getElementById('username').textContent = params.get('username');
+        document.getElementById('message').textContent = params.get('message');
+    </script>
+</body>
+
+</html>
