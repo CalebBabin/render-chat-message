@@ -23,19 +23,32 @@
             font-size: 20px;
         }
 
+        :root {
+            font-size: 20px;
+        }
+
         body {
             overflow-x: hidden;
             overflow-y: auto;
+
+            font-size: 1rem;
         }
 
         #username {
             font-weight: bold;
+        }
+
+        .spacer {
+            width: 100%;
+            margin: 1rem 0;
+            border-bottom: 0.25rem dotted black;
         }
     </style>
 </head>
 
 <body>
     <span id="username">?username=abc</span>: <span id="message">&message=xyz</span>
+    <div class="spacer"></div>
     <script>
         const params = (new URL(document.location)).searchParams;
         document.getElementById('username').textContent = params.get('username');
